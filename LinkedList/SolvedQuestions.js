@@ -98,7 +98,8 @@ function deleteNode(target) {
     current = current.next;
   }
 }
-
+// deleteNode(2);
+// printList();
 
 // Start Traversing: The loop runs as long as current.next is not null, meaning it stops before reaching the last node.
 
@@ -110,5 +111,54 @@ function deleteNode(target) {
 // Exit After Deletion: The return ensures the function exits once the node is deleted, preventing further traversal.
 
 // Continue Traversing: If the target value is not found, the loop moves the current pointer to the next node with current = current.next.
-deleteNode(2);
-printList();
+
+
+
+// Find Length of the Linked List
+
+// Input: head = [1, 2, 3, 4, 5]
+// Output: 5
+
+
+function findLength() {
+  let current = head; // initializing head 
+  let count = 0; // count set to zero 
+  while (current != null) { // traverse until the current is not equal to null 
+    count++; // increment 
+    current = current.next; // set next 
+   }
+  console.log("count",count); 
+  return count; // return count
+}
+
+// printList();
+// findLength()
+
+
+// Search an Element
+
+// Input: head = [1, 2, 3, 4], value = 3
+
+// Output: true
+
+// Input: head = [1, 2, 3, 4], value = 5
+
+// Output: false
+
+
+function searchElement(value) {
+  let current = head; // initialize 
+  while (current != null) {
+    if (current.data == value) { 
+        console.log(true);
+      return true;
+    }
+    current = current.next;
+  }
+  console.log(false)
+  return false;
+}
+
+
+printList() 
+searchElement(3)
